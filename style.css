@@ -5893,6 +5893,24 @@ body:not(.device-touch):not(.device-xs):not(.device-xxs) .product-overlay a {
 	border-radius: 2px;
 	z-index: 5;
 }
+.sale-button {
+	position: absolute;
+	bottom: 10px;
+	right: 10px;
+	padding: 6px 10px;
+	background-color: #f79327;
+	color: #FFF;
+	text-shadow: 1px 1px 1px rgba(0,0,0,0.2);
+	border-radius: 2px;
+	z-index: 5;
+}
+.sale-button a{
+	color:#fff;
+	transition: 0.5s all;
+}
+.sale-button a:hover{
+	color: #000;
+}
 
 .sale-flash.out-of-stock { background-color: #777; }
 
@@ -13432,3 +13450,4 @@ body:not(.no-transition) #wrapper,
 	padding:0!important
 }
 
+#my-soon-counter-2{display:none;visibility: hidden;}

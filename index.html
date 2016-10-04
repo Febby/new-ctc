@@ -8,9 +8,9 @@
 	<!-- Stylesheets
 	============================================= -->
 	<link href="//fonts.googleapis.com/css?family=Lato:300,400,400italic,600,700|Raleway:300,400,500,600,700|Crete+Round:400italic" rel="stylesheet" type="text/css" />
-	<link rel="stylesheet" href="css/bootstrap.css" type="text/css" />
+	<link rel="stylesheet" href="css/bootstrap-dist.css" type="text/css" />
 	<link rel="stylesheet" href="css/soon.min.css" >
-	<link rel="stylesheet" href="style.css" type="text/css" />
+	<link rel="stylesheet" href="style-dist.css" type="text/css" />
 	<link rel="stylesheet" href="css/swiper.css" type="text/css" />
 	<link rel="stylesheet" href="css/dark.css" type="text/css" />
 	<link rel="stylesheet" href="css/font-icons.css" type="text/css" />
@@ -29,6 +29,34 @@
 	<!-- Document Title
 	============================================= -->
 	<title>Online Fair - CTC Travel</title>
+
+	<script type="text/javascript">
+    function salesStart() {
+      console.log("Sales start");
+      $( "#sales-status" ).html( "Thank Your For Your Support, Sales Have Ended!" );
+      $("#my-soon-counter").hide();
+      $( "#sl-txt" ).html( "Sales Ends in" );
+          $("#my-soon-counter-2").css({
+          "visibility": "visible"
+        });
+        //   $(".sectionhome-tour").css({
+        //   "margin": "0"
+        // });
+       
+          // sweetAlert("Sorry...", "Sales have ended", "error");
+            $("[id^=sale-btn]").css({
+          "visibility": "visible"
+        });
+    }
+    function salesEnd() {
+      console.log("Sales End");
+      // document.getElementById("my-soon-counter").style.display = "none";
+      // sweetAlert("WE THANK YOU FOR YOUR SUPPORT", "Hope you had grabbed an awesome deal during the It's Travel Deals Friday Sale. We thank you for your support, stay tuned for our next sale!", "success");
+        $("[id^=sale-btn]").hide();
+        $( "#sl-txt" ).html( "Thank Your For Your Support, Sales Have Ended!" );
+        $("#my-soon-counter-2").hide();
+    }
+    </script>
 
 </head>
 
@@ -125,7 +153,7 @@
 			<div class="content-wrap">
 
 				<a class="button button-full button-purple center tright header-stick bottommargin-lg">
-					<div class="container clearfix">
+					<div class="container clearfix" id="sales-status">
 						CTC Online Fair Sale Starts Soon <strong>Check It Out</strong> <i class="icon-caret-down" style="top:4px;"></i>
 					</div>
 				</a>
@@ -143,7 +171,16 @@
 					<div class="heading-block center nobottomborder">
 						<h1>Flash Deals</h1>
 							<div class="soon" id="my-soon-counter"
-							     data-due="2016-10-10T12:00:00"
+							     data-due="2016-10-10T10:00+08:00"
+							     data-event-complete="salesStart"
+							     data-layout="group label-uppercase label-small"
+							     data-scale-max="xxl"
+							     data-format="d,h,m,s"
+							     data-face="flip color-dark shadow-soft corners-round">
+							</div>
+							<div class="soon" id="my-soon-counter-2"
+							     data-due="2016-10-12T10:00+08:00"
+							     data-event-complete="salesEnd"
 							     data-layout="group label-uppercase label-small"
 							     data-scale-max="xxl"
 							     data-format="d,h,m,s"
@@ -232,6 +269,7 @@
 															<a href="images/china/flash-deals/VN5HH/Resized/res_Yen.jp" class="hidden" data-lightbox="gallery-item"></a>
 															<a href="#" class="right-icon"><i class="icon-line-ellipsis"></i></a>
 														</div>
+														<div class="sale-button" id="sl-btn"><a href="#">Book Now</a></div>
 													</div>
 													<div class="portfolio-desc">
 														<h3><a href="#">5D4N Hanoi + Halong Bay (VN5HH)</a></h3>
@@ -260,6 +298,7 @@
 															<a href="images/china/flash-deals/CPEKC/Resized/res_Temple.jpg" class="left-icon" data-lightbox="gallery-item"><i class="icon-line-stack-2"></i></a>
 															<a href="#" class="right-icon"><i class="icon-line-ellipsis"></i></a>
 														</div>
+														<div class="sale-button" id="sl-btn"><a href="#">Book Now</a></div>
 													</div>
 													<div class="portfolio-desc">
 														<h3><a href="#">8D Beijing + Tianjin (CPEKC)</a></h3>
@@ -288,6 +327,7 @@
 															<a href="images/china/flash-deals/CYNWC/Resized/res_Stone.jpg" class="left-icon" data-lightbox="gallery-item"><i class="icon-line-stack-2"></i></a>
 															<a href="#" class="right-icon"><i class="icon-line-ellipsis"></i></a>
 														</div>
+														<div class="sale-button" id="sl-btn"><a href="#">Book Now</a></div>
 													</div>
 													<div class="portfolio-desc">
 														<h3><a href="#">8D Yunna Shangri-LA (CYNWC)</a></h3>
@@ -317,6 +357,7 @@
 													<a href="images/china/flash-deals/CHRB3/Resized/res_Shenyang.jpg" class="hidden" data-lightbox="gallery-item"></a>
 													<a href="#" class="right-icon"><i class="icon-line-ellipsis"></i></a>
 												</div>
+												<div class="sale-button" id="sl-btn"><a href="#">Book Now</a></div>
 											</div>
 											<div class="portfolio-desc">
 											<h3><a href="#">8D Shenyang (CHRB3)</a></h3>
@@ -340,6 +381,7 @@
 													<a href="images/china/flash-deals/CCAN8/Resized/res_Zhuhai.jpg" class="hidden" data-lightbox="gallery-item"></a>
 													<a href="#" class="right-icon"><i class="icon-line-ellipsis"></i></a>
 												</div>
+												<div class="sale-button" id="sl-btn"><a href="#">Book Now</a></div>
 											</div>
 											<div class="portfolio-desc">
 													<h3><a href="#">E-8D Hongkong Macau + Zhuhai Circus (CCAN8)</a></h3>
@@ -374,10 +416,15 @@
 															<a href="#" class="right-icon"><i class="icon-line-ellipsis"></i></a>
 														</div>
 														<div class="sale-flash">Save $100!</div>
+														<div class="sale-button" id="sl-btn"><a href="#">Book Now</a></div>
+														
 													</div>
 													<div class="portfolio-desc">
 														<h3><a href="#">7 Days Best of Okinawa &amp; Taipei Free &amp; Easy (JP5OT)</a></h3>
-														<div class="product-price"><del>$1988</del> <ins>$1888</ins></div>
+														<div class="product-price"><del>$1988</del> <ins>$1888</ins> </div>
+														<!-- <div class="buy">
+															<a href="#" class="btn btn-primary" role="button">Button</a>
+														</div> -->
 														<span>Departure Date 11/12, 16/12, 18/12</span>
 													</div>
 												</article>
@@ -405,6 +452,7 @@
 															<a href="#" class="right-icon"><i class="icon-line-ellipsis"></i></a>
 														</div>
 														<div class="sale-flash">Save $100!</div>
+														<div class="sale-button" id="sl-btn"><a href="#">Book Now</a></div>
 													</div>
 													<div class="portfolio-desc">
 														<h3><a href="#">7 Days Mysterious Wakayama + Mie (JP7MW)</a></h3>
@@ -433,6 +481,7 @@
 															<a href="#" class="right-icon"><i class="icon-line-ellipsis"></i></a>
 														</div>
 														<div class="sale-flash">Save $100!</div>
+														<div class="sale-button" id="sl-btn"><a href="#">Book Now</a></div>
 													</div>
 													<div class="portfolio-desc">
 														<h3><a href="#">7 Days Taiwan "Green Lifestyle" New Highlight (TW7AW)</a></h3>
@@ -465,6 +514,7 @@
 													<a href="#" class="right-icon"><i class="icon-line-ellipsis"></i></a>
 												</div>
 												<div class="sale-flash">Saves up to $200!</div>
+												<div class="sale-button" id="sl-btn"><a href="#">Book Now</a></div>
 											</div>
 											<div class="portfolio-desc">
 											<h3><a href="#">8 Days Icons of Melbourne &amp; Sydney (AU08I)</a></h3>
@@ -493,6 +543,7 @@
 													<a href="images/international/day-2/EU12M/Thumb/res_Place.jpg" class="left-icon" data-lightbox="gallery-item"><i class="icon-line-stack-2"></i></a>
 												</div>
 												<div class="sale-flash">Saves $150!</div>
+												<div class="sale-button" id="sl-btn"><a href="#">Book Now</a></div>
 											</div>
 											<div class="portfolio-desc">
 													<h3><a href="#">12 Days Classical Europe (EU12M)</a></h3>
@@ -537,6 +588,7 @@
 															<a href="images/international/fl-day3/VECOGC/Resized/Res_VECOGC-8.jpg" class="left-icon" data-lightbox="gallery-item"><i class="icon-line-stack-2"></i></a>
 															<a href="#" class="right-icon"><i class="icon-line-ellipsis"></i></a>
 														</div>
+														<div class="sale-button" id="sl-btn"><a href="#">Book Now</a></div>
 													<!-- 	<div class="sale-flash">Save $100!</div> -->
 													</div>
 													<div class="portfolio-desc">
@@ -570,6 +622,7 @@
 															<a href="images/international/fl-day3/VEPRTC/Resized/Res_VEPRTC-6.jpg" class="left-icon" data-lightbox="gallery-item"><i class="icon-line-stack-2"></i></a>
 															<a href="#" class="right-icon"><i class="icon-line-ellipsis"></i></a>
 														</div>
+														<div class="sale-button" id="sl-btn"><a href="#">Book Now</a></div>
 														<!-- <div class="sale-flash">Save $100!</div> -->
 													</div>
 													<div class="portfolio-desc">
@@ -597,6 +650,7 @@
 															<a href="#" class="right-icon"><i class="icon-line-ellipsis"></i></a>
 														</div>
 														<div class="sale-flash">Save $80!</div>
+														<div class="sale-button" id="sl-btn"><a href="#">Book Now</a></div>
 													</div>
 													<div class="portfolio-desc">
 														<h3><a href="#">FIT Iceland 5D4N Auroras, Volcanoes &amp; Glacier Lagoon (EU5KEF)</a></h3>
@@ -627,6 +681,7 @@
 													<a href="#" class="right-icon"><i class="icon-line-ellipsis"></i></a>
 												</div>
 												<div class="sale-flash">Saves up to $80!</div>
+												<div class="sale-button" id="sl-btn"><a href="#">Book Now</a></div>
 											</div>
 											<div class="portfolio-desc">
 											<h3><a href="#">FIT USA 10D9N USA West Coast Supreme (US9LAX) </a></h3>
@@ -652,6 +707,7 @@
 													<a href="#" class="right-icon"><i class="icon-line-ellipsis"></i></a>
 												</div>
 												<div class="sale-flash">Saves $300!</div>
+												<div class="sale-button" id="sl-btn"><a href="#">Book Now</a></div>
 											</div>
 											<div class="portfolio-desc">
 													<h3><a href="#">FIT Korea 5D4N Sparkling of Korea (KR5KOR) </a></h3>
@@ -746,6 +802,7 @@
 																<a href="#" class="right-icon"><i class="icon-line-ellipsis"></i></a>
 															</div>
 															<div class="sale-flash">Save $200!</div>
+															<div class="sale-button" id="sl-btn"><a href="#">Book Now</a></div>
 												</div>
 												<div class="portfolio-desc">
 														<h3><a href="#">8 Days Fairyland Jiuzhaigou / Huanglong / Mt. Emei / Qiang Village (CSCJC)</a></h3>
@@ -769,6 +826,7 @@
 																<a href="#" class="right-icon"><i class="icon-line-ellipsis"></i></a>
 															</div>
 															<div class="sale-flash">Save $200!</div>
+															<div class="sale-button" id="sl-btn"><a href="#">Book Now</a></div>
 												</div>
 												<div class="portfolio-desc">
 													<h3><a href="#">8D Jiangan - Shanghai + Yangzhou - Zhengjiang(CHS1)</a></h3>
@@ -791,6 +849,7 @@
 																<a href="#" class="right-icon"><i class="icon-line-ellipsis"></i></a>
 															</div>
 															<div class="sale-flash">Save $100!</div>
+															<div class="sale-button" id="sl-btn"><a href="#">Book Now</a></div>
 												</div>
 												<div class="portfolio-desc">
 													<h3><a href="#">e-8D Scenic Guilin + Merryland Theme Park (CKWLC)</a></h3>
@@ -820,6 +879,7 @@
 															<a href="#" class="right-icon"><i class="icon-line-ellipsis"></i></a>
 														</div>
 														<div class="sale-flash">Save $140!</div>
+														<div class="sale-button" id="sl-btn"><a href="#">Book Now</a></div>
 											</div>
 											<div class="portfolio-desc">
 												<h3><a href="#">8 Days Kunming, Dali, Lijiang(CYDL8)</a></h3>
@@ -843,6 +903,7 @@
 															<a href="#" class="right-icon"><i class="icon-line-ellipsis"></i></a>
 														</div>
 														<div class="sale-flash">Save $99!</div>
+														<div class="sale-button" id="sl-btn"><a href="#">Book Now</a></div>
 											</div>
 											<div class="portfolio-desc">
 													<h3><a href="#">5 Days 4 Nights Ho Chi Minh City + Vungtau Beach (VN5HV)</a></h3>
@@ -903,6 +964,7 @@
 																<a href="#" class="right-icon"><i class="icon-line-ellipsis"></i></a>
 															</div>
 															<div class="sale-flash">Save $100!</div>
+															<div class="sale-button" id="sl-btn"><a href="#">Book Now</a></div>
 												</div>
 												<div class="portfolio-desc">
 														<h3><a href="#">8 Days 6 Nights Winter in Hokkaido (JP8WH)</a></h3>
@@ -960,6 +1022,7 @@
 																<a href="#" class="right-icon"><i class="icon-line-ellipsis"></i></a>
 															</div>
 															<div class="sale-flash">Saves Up To $200!</div>
+															<div class="sale-button" id="sl-btn"><a href="#">Book Now</a></div>
 												</div>
 												<div class="portfolio-desc">
 													<h3><a href="#">8 Days Icons of Melbourne &amp; Sydney (AU08l)</a></h3>
@@ -989,6 +1052,7 @@
 															<a href="#" class="right-icon"><i class="icon-line-ellipsis"></i></a>
 														</div>
 														<div class="sale-flash">Save $100!</div>
+														<div class="sale-button" id="sl-btn"><a href="#">Book Now</a></div>
 											</div>
 											<div class="portfolio-desc">
 												<h3><a href="#">7 Days 5 Nights Korea Winter Ski Highlight (KR7WH)</a></h3>
@@ -1017,6 +1081,7 @@
 															<a href="#" class="right-icon"><i class="icon-line-ellipsis"></i></a>
 														</div>
 														<div class="sale-flash">Save $100!</div>
+														<div class="sale-button" id="sl-btn"><a href="#">Book Now</a></div>
 											</div>
 											<div class="portfolio-desc">
 													<h3><a href="#">14 Days European Grandeur (EU14A)</a></h3>
@@ -1073,8 +1138,10 @@
 																<a href="images/international/fr-day3/17D-Alaska/Resized/Res_Alaska.jpg" class="left-icon" data-lightbox="gallery-item"><i class="icon-line-stack-2"></i></a>
 																
 																<a href="#" class="right-icon"><i class="icon-line-ellipsis"></i></a>
+
 															</div>
 															<!-- <div class="sale-flash">Save $100!</div> -->
+															<div class="sale-button" id="sl-btn"><a href="#">Book Now</a></div>
 												</div>
 												<div class="portfolio-desc">
 														<h3><a href="#">17D Alaska (all inclusive or free upgrade to balcony, plus free travel insurance)</a></h3>
@@ -1103,6 +1170,7 @@
 																<a href="#" class="right-icon"><i class="icon-line-ellipsis"></i></a>
 															</div>
 															<div class="sale-flash">Save $190!</div>
+															<div class="sale-button" id="sl-btn"><a href="#">Book Now</a></div>
 												</div>
 												<div class="portfolio-desc">
 													<h3><a href="#">FIT Iceland 8D7N Northen Lights Explorer (EU8KEF)</a></h3>
@@ -1127,6 +1195,7 @@
 																<a href="#" class="right-icon"><i class="icon-line-ellipsis"></i></a>
 															</div>
 															<div class="sale-flash">Saves Up To $70!</div>
+															<div class="sale-button" id="sl-btn"><a href="#">Book Now</a></div>
 												</div>
 												<div class="portfolio-desc">
 													<h3><a href="#">FIT USA 7D6N USA West Coast Supreme (US6LAX)</a></h3>
@@ -1154,6 +1223,7 @@
 															<a href="#" class="right-icon"><i class="icon-line-ellipsis"></i></a>
 														</div>
 														<div class="sale-flash">Save $300!</div>
+														<div class="sale-button" id="sl-btn"><a href="#">Book Now</a></div>
 											</div>
 											<div class="portfolio-desc">
 												<h3><a href="#">FIT Korea 5D4N Sparkling of Korea (KR5KOS) </a></h3>
@@ -1179,6 +1249,7 @@
 															<a href="#" class="right-icon"><i class="icon-line-ellipsis"></i></a>
 														</div>
 														<div class="sale-flash">Save $50!</div>
+														<div class="sale-button" id="sl-btn"><a href="#">Book Now</a></div>
 											</div>
 											<div class="portfolio-desc">
 													<h3><a href="#">FIT Taiwan 7D6N Taiwan New Experience Getaway (TWSAN7) </a></h3>
@@ -1502,10 +1573,10 @@
 	<!-- Go To Top
 	============================================= -->
 	<div id="gotoTop" class="icon-angle-up"></div>
-	<script type="text/javascript">
+	<!-- <script type="text/javascript">
 		function soonCompleteCallback(){ test();}
 		function soonCompleteCallback(){ test();}
-	</script>
+	</script> -->
 
 	<!-- External JavaScripts
 	============================================= -->
