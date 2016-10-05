@@ -33,7 +33,6 @@
 	<script type="text/javascript">
     function salesStart() {
       console.log("Sales start");
-      $( "#sales-status" ).html( "Thank Your For Your Support, Sales Have Ended!" );
       $("#my-soon-counter").hide();
       $( "#sl-txt" ).html( "Sales Ends in" );
           $("#my-soon-counter-2").css({
@@ -44,7 +43,7 @@
         // });
        
           // sweetAlert("Sorry...", "Sales have ended", "error");
-            $("[id^=sale-btn]").css({
+            $("[id^=sl-btn]").css({
           "visibility": "visible"
         });
     }
@@ -170,8 +169,9 @@
 
 					<div class="heading-block center nobottomborder">
 						<h1>Flash Deals</h1>
+						<h4 class="salestxt" id="sl-txt">Starts in..</h4>
 							<div class="soon" id="my-soon-counter"
-							     data-due="2016-10-10T10:00+08:00"
+							     data-due="2016-10-10T00:00+08:00"
 							     data-event-complete="salesStart"
 							     data-layout="group label-uppercase label-small"
 							     data-scale-max="xxl"
@@ -186,7 +186,9 @@
 							     data-format="d,h,m,s"
 							     data-face="flip color-dark shadow-soft corners-round">
 							</div>
+							
 					</div>
+					
 
 				
 			<!-- 
@@ -238,10 +240,6 @@
 								<li><a href="#" data-filter=".fd-day3">Day 3</a></li>
 
 							</ul><!-- #portfolio-filter end -->
-
-							<!-- <div id="portfolio-shuffle" class="portfolio-shuffle" data-container="#portfolio">
-								<i class="icon-random"></i>
-							</div> -->
 
 							<div class="clear"></div>
 

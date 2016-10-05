@@ -13450,4 +13450,9 @@ body:not(.no-transition) #wrapper,
 	padding:0!important
 }
 
-#my-soon-counter-2{display:none;visibility: hidden;}
+#my-soon-counter-2{visibility: hidden;}
+.salestxt{color:#dadada!important;}
+#sl-btn{
+	visibility:hidden;
+	
+}
