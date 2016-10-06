@@ -7,7 +7,7 @@
 
 	<!-- Stylesheets
 	============================================= -->
-	<link href="//fonts.googleapis.com/css?family=Lato:300,400,400italic,600,700|Raleway:300,400,500,600,700|Crete+Round:400italic" rel="stylesheet" type="text/css" />
+	<link href="//fonts.googleapis.com/css?family=Lato:300,400,400italic,600,700|Raleway:300,400,500,600,700|Crete+Round:400italic|Berkshire+Swash" rel="stylesheet" type="text/css" />
 	<link rel="stylesheet" href="css/bootstrap-dist.css" type="text/css" />
 	<link rel="stylesheet" href="css/soon.min.css" >
 	<link rel="stylesheet" href="style-dist.css" type="text/css" />
@@ -35,6 +35,7 @@
       console.log("Sales start");
       $("#my-soon-counter").hide();
       $( "#sl-txt" ).html( "Sales Ends in" );
+      $( "#sales-status" ).html( "CTC Travel Online Fair Sale Starts Now!" );
           $("#my-soon-counter-2").css({
           "visibility": "visible"
         });
@@ -105,7 +106,7 @@
 							<div class="container clearfix">
 								<div class="slider-caption slider-caption-center">
 									<h2 data-caption-animate="fadeInUp">Welcome To</h2>
-									<h2 data-caption-animate="fadeInUp" data-caption-delay="200">CTC October Online Fair</h2>
+									<h2 data-caption-animate="fadeInUp" data-caption-delay="200">CTC Travel October Online Fair</h2>
 								</div>
 							</div>
 						</div>
@@ -133,15 +134,15 @@
 
 			<div class="content-wrap">
 
-				<a class="button button-full button-purple center tright header-stick bottommargin-lg">
-					<div class="container clearfix" id="sales-status">
-						CTC Online Fair Sale Starts Soon <strong>Check It Out</strong> <i class="icon-caret-down" style="top:4px;"></i>
+				<a class="button button-full button-ctc center tright header-stick bottommargin-lg">
+					<div class="container clearfix"">
+						<span id="sales-status">CTC Travel Online Fair Sale Starts Soon</span> <strong>Check It Out</strong> <i class="icon-caret-down" style="top:4px;"></i>
 					</div>
 				</a>
 				<!-- ad space 1  start-->
 				 <div class="container clearfix col_twelve center bottommargin-lg">
 
-				 	<img src="http://placehold.it/1140x100">
+				 	<img src="images/DBS-ad-1.jpg">
 
 				 </div>
 				<!-- ad space 1  end-->
@@ -150,7 +151,7 @@
 				<div class="container clearfix">
 
 					<div class="heading-block center nobottomborder">
-						<h1>Flash Deals</h1>
+						<h1 class="ctc-head">Flash Deals <span>Limited</span></h1>
 						<h4 class="salestxt" id="sl-txt">Starts in..</h4>
 							<div class="soon" id="my-soon-counter"
 							     data-due="2016-10-10T00:00+08:00"
@@ -720,7 +721,7 @@
 					<div class="container clearfix">
 
 					<div class="heading-block center nobottomborder bottommargin">
-						<h1>Fresh Deals</h1>
+						<h1 class="ctc-head">Fresh Deals <span class="fresh">New</span></h1>
 						<!-- <div class="soon" id="fd-counter"
 							     data-due="2016-10-11T12:00:00"
 							     data-layout="group label-uppercase label-small"

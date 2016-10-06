@@ -919,7 +919,6 @@ body.stretched #header.full-header .container {
 #header.full-header #logo {
 	padding-right: 30px;
 	margin-right: 30px;
-	border-right: 1px solid #EEE;
 }
 
 #header.transparent-header.full-header #logo { border-right-color: rgba(0,0,0,0.1); }
@@ -7079,7 +7078,7 @@ body:not(.device-touch) .button.button-full strong {
 	color: #AEE239;
 	border-color: #AEE239;
 }
-
+.button-ctc{background-color: #ffa500;}
 .button-purple { background-color: #5D4157; }
 .button-3d.button-purple:hover,
 .button-reveal.button-purple:hover,
@@ -13470,3 +13469,6 @@ body:not(.no-transition) #wrapper,
 	visibility:hidden;
 	
 }
+.ctc-head{font-family:'Berkshire Swash', cursive; text-transform: capitalize!important; font-size: 4em!important; }
+.ctc-head span{color:red!important;}
+.fresh{color:#1abc9c;}
