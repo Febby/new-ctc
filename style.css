@@ -2818,7 +2818,7 @@ body:not(.stretched) .slider-parallax .slider-parallax-inner { left: auto; }
 	margin: 0;
 	background-position: center center;
 	background-repeat: no-repeat;
-	background-size: cover;
+	background-size: contain;
 	overflow: hidden;
 }
 
@@ -13470,5 +13470,5 @@ body:not(.no-transition) #wrapper,
 	
 }
 .ctc-head{font-family:'Berkshire Swash', cursive; text-transform: capitalize!important; font-size: 4em!important; }
-.ctc-head span{color:red!important;}
-.fresh{color:#1abc9c;}
+span .flash{color:red!important;}
+span .fresh{color:#1abc9c!important;}
