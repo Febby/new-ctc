@@ -3461,8 +3461,9 @@ body:not(.device-touch) .grid-container {
 	display: block;
 	position: relative;
 	padding: 12px 18px;
-	font-size: 13px;
+	font-size: 16px;
 	line-height: 15px;
+	text-transform: uppercase;
 	color: #666;
 	border-left: 1px solid rgba(0,0,0,0.07);
 }
