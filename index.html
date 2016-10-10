@@ -44,15 +44,26 @@
             $("[id^=sl-btn]").css({
           "visibility": "visible"
         });
+        //      $("#d-1,#fd-1,.fd-china-day-1").css({
+        //   "display": "none"
+        // });
+
+          $( "#d-1,#fd-1,.fd-china-day-1,.fr-day-1" ).remove();
+        //       $(".fd-china-day-1").css({
+        //   "display": "none"
+        // });
+
+
     }
     function salesEnd() {
       console.log("Sales End");
       // document.getElementById("my-soon-counter").style.display = "none";
       // sweetAlert("WE THANK YOU FOR YOUR SUPPORT", "Hope you had grabbed an awesome deal during the It's Travel Deals Friday Sale. We thank you for your support, stay tuned for our next sale!", "success");
         // $("[id^=sl-btn]").hide();
-        // $( "#sl-txt" ).html( "Thank Your For Your Support, Sales Have Ended!" );
+        $( "#sl-txt" ).html( "Thank Your For Your Support, Sales Have Ended!" );
         // $("#my-soon-counter-2").hide();
     }
+    
     </script>
 
 </head>
@@ -186,9 +197,9 @@
 							<ul id="portfolio-filter" class="portfolio-filter clearfix" data-container="#fd-container">
 
 								<li class="activeFilter"><a href="#" data-filter="*">Show All Deals</a></li>
-								<li><a href="#" data-filter=".fd-china-day-1">Day 1 (10 Oct)</a></li>
-								<li><a href="#" data-filter=".fd-day2">Day 2 (11 Oct)</a></li>
-								<li><a href="#" data-filter=".fd-day3">Day 3 (12 Oct)</a></li>
+								<li id="d-1"><a href="#" data-filter=".fd-china-day-1">Day 1 (10 Oct)</a></li>
+								<li id="d-2"><a href="#" data-filter=".fd-day2">Day 2 (11 Oct)</a></li>
+								<li id="d-3"><a href="#" data-filter=".fd-day3">Day 3 (12 Oct)</a></li>
 
 							</ul><!-- #portfolio-filter end -->
 
@@ -558,7 +569,7 @@
 													</div>
 												</article>
 				
-												<article class="portfolio-item fd-china-day-1">
+												<article class="portfolio-item">
 													<div class="portfolio-image">
 														<div class="fslider" data-arrows="false" data-speed="400" data-pause="4000">
 															<div class="flexslider">
@@ -592,7 +603,7 @@
 													</div>
 												</article>
 				
-												<article class="portfolio-item fd-china-day-1">
+												<article class="portfolio-item">
 													<div class="portfolio-image">
 														<div class="fslider" data-arrows="false" data-speed="400" data-pause="4000">
 															<div class="flexslider">
@@ -721,9 +732,9 @@
 							<ul id="portfolio-filter" class="portfolio-filter clearfix" data-container="#portfolio">
 
 								<li class="activeFilter"><a href="#" data-filter="*">Show All Deals</a></li>
-								<li><a href="#" data-filter=".fr-day-1">Day 1 (10 Oct)</a></li>
-								<li><a href="#" data-filter=".fr-day-2">Day 2 (11 Oct)</a></li>
-								<li><a href="#" data-filter=".fr-day-3">Day 3 (12 Oct)</a></li>
+								<li id="fd-1"><a href="#" data-filter=".fr-day-1">Day 1 (10 Oct)</a></li>
+								<li id="fd-2"><a href="#" data-filter=".fr-day-2">Day 2 (11 Oct)</a></li>
+								<li id="fd-3"><a href="#" data-filter=".fr-day-3">Day 3 (12 Oct)</a></li>
 								
 
 							</ul><!-- #portfolio-filter end -->
